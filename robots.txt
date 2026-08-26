@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://yeshwanthreddy-oss.github.io/sitemap.xml
+Sitemap: https://yeshwanthreddy.com/sitemap.xml
