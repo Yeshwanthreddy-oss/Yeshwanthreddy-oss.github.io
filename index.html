@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary meta (static — present before JS runs, so crawlers & link unfurlers see it) -->
+    <title>Aisha Rahman — Business Analyst</title>
+    <meta
+      name="description"
+      content="Aisha Rahman — Business Analyst specializing in SQL, Power BI, Tableau, requirements analysis, and KPI-driven reporting. 1+ years turning operational data into measurable business outcomes."
+    />
+    <meta name="author" content="Aisha Rahman" />
+    <meta
+      name="keywords"
+      content="Aisha Rahman, Business Analyst, SQL, Power BI, Tableau, Data Analytics, Requirements Analysis, KPI, Portfolio"
+    />
+    <meta name="theme-color" content="#123A42" />
+    <link rel="canonical" href="https://example.com/" />
+
+    <!-- Open Graph (LinkedIn / Facebook) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Aisha Rahman" />
+    <meta property="og:title" content="Aisha Rahman — Business Analyst" />
+    <meta
+      property="og:description"
+      content="Business Analyst specializing in SQL, Power BI, Tableau, requirements analysis, and KPI-driven reporting."
+    />
+    <meta property="og:url" content="https://example.com/" />
+    <meta property="og:image" content="assets/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Aisha Rahman — Business Analyst" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Aisha Rahman — Business Analyst" />
+    <meta
+      name="twitter:description"
+      content="Business Analyst specializing in SQL, Power BI, Tableau, requirements analysis, and KPI-driven reporting."
+    />
+    <meta name="twitter:image" content="assets/og-image.png" />
+
+    <!-- Icons -->
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="assets/favicon.svg" />
+
+    <!-- Fonts: distinctive display serif + warm grotesque body + mono for data -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Hanken+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Structured data for richer search results -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Aisha Rahman",
+        "jobTitle": "Business Analyst",
+        "url": "https://example.com/",
+        "email": "mailto:aisha.rahman@example.com",
+        "sameAs": ["https://www.linkedin.com/", "https://github.com/"],
+        "knowsAbout": ["SQL", "Power BI", "Tableau", "Business Analysis", "Data Analytics", "KPI Reporting"]
+      }
+    </script>
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar" aria-label="Primary">
+      <div class="container">
+        <div class="nav-brand">
+          <a href="#home" aria-label="Back to top"></a>
+        </div>
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Toggle navigation menu"
+          aria-controls="navMenu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <!-- Navigation items loaded dynamically -->
+        </ul>
+      </div>
+    </nav>
+
+    <main id="main">
+      <!-- Hero -->
+      <section id="home" class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <p class="hero-eyebrow"><span id="heroGreeting"></span></p>
+            <h1 class="hero-title"><span class="highlight" id="heroName"></span></h1>
+            <h2 class="hero-subtitle" id="heroTitle"></h2>
+            <p class="hero-description" id="heroSummary"></p>
+            <div class="hero-highlights" id="heroHighlights"></div>
+            <div class="hero-cta" id="heroCTA"></div>
+            <div class="social-links" id="heroSocial"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="about section">
+        <div class="container">
+          <div class="section-head">
+            <span class="section-index" aria-hidden="true">01</span>
+            <h2 class="section-title"></h2>
+          </div>
+          <div class="about-content">
+            <div class="about-text" id="aboutText"></div>
+            <div class="about-stats" id="aboutStats"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section id="experience" class="experience section section--ink">
+        <div class="container">
+          <div class="section-head">
+            <span class="section-index" aria-hidden="true">02</span>
+            <h2 class="section-title"></h2>
+          </div>
+          <div class="timeline" id="experienceTimeline"></div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills" class="skills section">
+        <div class="container">
+          <div class="section-head">
+            <span class="section-index" aria-hidden="true">03</span>
+            <h2 class="section-title"></h2>
+          </div>
+          <div class="skills-grid" id="skillsGrid"></div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="projects section section--ink">
+        <div class="container">
+          <div class="section-head">
+            <span class="section-index" aria-hidden="true">04</span>
+            <h2 class="section-title"></h2>
+          </div>
+          <div class="projects-grid" id="projectsGrid"></div>
+        </div>
+      </section>
+
+      <!-- Education -->
+      <section id="education" class="education section">
+        <div class="container">
+          <div class="section-head">
+            <span class="section-index" aria-hidden="true">05</span>
+            <h2 class="section-title"></h2>
+          </div>
+          <div class="education-content">
+            <div class="education-grid" id="educationGrid"></div>
+            <div class="certifications">
+              <h3></h3>
+              <div class="cert-grid" id="certGrid"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="contact section section--ink">
+        <div class="container">
+          <div class="section-head">
+            <span class="section-index" aria-hidden="true">06</span>
+            <h2 class="section-title"></h2>
+          </div>
+          <div class="contact-content">
+            <div class="contact-info" id="contactInfo"></div>
+            <div class="contact-form-container" id="contactFormContainer"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p id="footerCopyright"></p>
+        <div class="footer-links" id="footerLinks"></div>
+      </div>
+    </footer>
+
+    <!-- Fallback for crawlers / no-JS visitors so the page is never blank -->
+    <noscript>
+      <div class="noscript-banner">
+        <h1>Aisha Rahman — Business Analyst</h1>
+        <p>
+          Business Analyst with 1+ years of experience in SQL, Power BI, Tableau, requirements analysis,
+          and KPI-driven reporting. This portfolio is interactive; please enable JavaScript for the full
+          experience.
+        </p>
+        <p>
+          <a href="mailto:aisha.rahman@example.com">aisha.rahman@example.com</a>
+          &nbsp;•&nbsp;
+          <a href="https://www.linkedin.com/">LinkedIn</a>
+          &nbsp;•&nbsp;
+          <a href="https://github.com/">GitHub</a>
+        </p>
+      </div>
+    </noscript>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

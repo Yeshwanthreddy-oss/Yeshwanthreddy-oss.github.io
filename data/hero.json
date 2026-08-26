@@ -1,0 +1,44 @@
+{
+  "greeting": "Hi, I'm",
+  "name": "Yeshwanth Reddy Aleti",
+  "title": "Network Engineer",
+  "summary": "Network Engineer with 4+ years of experience designing, implementing, and supporting enterprise network infrastructures across financial services and global enterprise environments.",
+  "avatarUrl": "/avatar.png",
+  "highlights": [
+    {
+      "icon": "fas fa-briefcase",
+      "text": "Professional Experience"
+    },
+    {
+      "icon": "fas fa-code",
+      "text": "Technical Expertise"
+    },
+    {
+      "icon": "fas fa-users",
+      "text": "Team Collaboration"
+    }
+  ],
+  "cta": {
+    "buttons": [
+      {
+        "text": "Get In Touch",
+        "href": "#contact",
+        "type": "primary",
+        "external": false
+      },
+      {
+        "text": "View My Work",
+        "href": "#projects",
+        "type": "secondary",
+        "external": false
+      }
+    ]
+  },
+  "socialLinks": [
+    {
+      "platform": "Email",
+      "url": "mailto:yeshwanth.ra61@gmail.com",
+      "icon": "fas fa-envelope"
+    }
+  ]
+}

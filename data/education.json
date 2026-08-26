@@ -1,0 +1,32 @@
+{
+  "sectionTitle": "Education & Certifications",
+  "certificationsTitle": "Certifications",
+  "education": [
+    {
+      "degree": "Master of Science in Cybersecurity",
+      "school": "Saint Peter's University, Jersey City, NJ",
+      "institution": "Saint Peter's University, Jersey City, NJ",
+      "period": "Sep 2022 – Nov 2023",
+      "details": "",
+      "description": ""
+    },
+    {
+      "degree": "Bachelor of Science in Computer Science",
+      "school": "Narsimha Reddy Engineering College, Hyderabad, India",
+      "institution": "Narsimha Reddy Engineering College, Hyderabad, India",
+      "period": "Aug 2017 – Jul 2021",
+      "details": "",
+      "description": ""
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Cisco Certified Network Associate (CCNA) Security",
+      "issuer": "Cisco"
+    },
+    {
+      "name": "CompTIA Security+",
+      "issuer": "CompTIA"
+    }
+  ]
+}

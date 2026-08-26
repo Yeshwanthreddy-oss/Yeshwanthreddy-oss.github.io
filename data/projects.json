@@ -1,0 +1,126 @@
+{
+  "sectionTitle": "Featured Projects",
+  "projects": [
+    {
+      "title": "kube-rightsizer",
+      "description": "Educational project for mastering software architecture",
+      "technologies": [
+        "Go",
+        "Shell",
+        "Go Template",
+        "Dockerfile"
+      ],
+      "icon": "fas fa-project-diagram",
+      "image": "",
+      "github": "https://github.com/Yeshwanthreddy-oss/kube-rightsizer",
+      "demo": "https://github.com/Yeshwanthreddy-oss/kube-rightsizer"
+    },
+    {
+      "title": "three-tier-architecture",
+      "description": "Comprehensive project exploring software design patterns",
+      "technologies": [
+        "HCL",
+        "Shell"
+      ],
+      "icon": "fas fa-project-diagram",
+      "image": "",
+      "github": "https://github.com/Yeshwanthreddy-oss/three-tier-architecture",
+      "demo": "https://github.com/Yeshwanthreddy-oss/three-tier-architecture"
+    },
+    {
+      "title": "observatory",
+      "description": "Personal project for exploring modern development practices",
+      "technologies": [
+        "HCL",
+        "Python",
+        "Makefile",
+        "Dockerfile"
+      ],
+      "icon": "fas fa-project-diagram",
+      "image": "",
+      "github": "https://github.com/Yeshwanthreddy-oss/observatory",
+      "demo": "https://github.com/Yeshwanthreddy-oss/observatory"
+    },
+    {
+      "title": "sentinel-triage",
+      "description": "Personal development project using industry best practices",
+      "technologies": [
+        "Python",
+        "Dockerfile"
+      ],
+      "icon": "fas fa-project-diagram",
+      "image": "",
+      "github": "https://github.com/Yeshwanthreddy-oss/sentinel-triage",
+      "demo": "https://github.com/Yeshwanthreddy-oss/sentinel-triage"
+    },
+    {
+      "title": "deploying-aws-webapp-terraform-github-actions",
+      "description": "Personal development project using industry best practices",
+      "technologies": [
+        "HCL",
+        "HTML",
+        "Python",
+        "Dockerfile"
+      ],
+      "icon": "fas fa-brain",
+      "image": "",
+      "github": "https://github.com/Yeshwanthreddy-oss/deploying-aws-webapp-terraform-github-actions",
+      "demo": "https://github.com/Yeshwanthreddy-oss/deploying-aws-webapp-terraform-github-actions"
+    },
+    {
+      "title": "lakehouse-quality-gate",
+      "description": "Full-featured application built as a learning exercise",
+      "technologies": [
+        "Python",
+        "Dockerfile"
+      ],
+      "icon": "fas fa-project-diagram",
+      "image": "",
+      "github": "https://github.com/Yeshwanthreddy-oss/lakehouse-quality-gate",
+      "demo": "https://github.com/Yeshwanthreddy-oss/lakehouse-quality-gate"
+    },
+    {
+      "title": "vuln-priority-engine",
+      "description": "Practice repository for exploring advanced features",
+      "technologies": [
+        "Python"
+      ],
+      "icon": "fas fa-project-diagram",
+      "image": "",
+      "github": "https://github.com/Yeshwanthreddy-oss/vuln-priority-engine",
+      "demo": "https://github.com/Yeshwanthreddy-oss/vuln-priority-engine"
+    },
+    {
+      "title": "pipeline-guard",
+      "description": "Comprehensive project exploring software design patterns",
+      "technologies": [
+        "Python",
+        "Open Policy Agent",
+        "HCL",
+        "Dockerfile"
+      ],
+      "icon": "fas fa-project-diagram",
+      "image": "",
+      "github": "https://github.com/Yeshwanthreddy-oss/pipeline-guard",
+      "demo": "https://github.com/Yeshwanthreddy-oss/pipeline-guard"
+    },
+    {
+      "title": "end-to-end-pipeline-snowflake-dbt-tableau",
+      "description": "Portfolio project showcasing development capabilities",
+      "technologies": [],
+      "icon": "fas fa-project-diagram",
+      "image": "",
+      "github": "https://github.com/Yeshwanthreddy-oss/end-to-end-pipeline-snowflake-dbt-tableau",
+      "demo": "https://github.com/Yeshwanthreddy-oss/end-to-end-pipeline-snowflake-dbt-tableau"
+    },
+    {
+      "title": "atomic-detection-pipeline",
+      "description": "Practice application demonstrating full-stack development skills",
+      "technologies": [],
+      "icon": "fas fa-project-diagram",
+      "image": "",
+      "github": "https://github.com/Yeshwanthreddy-oss/atomic-detection-pipeline",
+      "demo": "https://github.com/Yeshwanthreddy-oss/atomic-detection-pipeline"
+    }
+  ]
+}
