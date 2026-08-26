@@ -1,126 +1,16 @@
 {
-  "sectionTitle": "Featured Projects",
+  "sectionTitle": "Selected systems",
+  "sectionIntro": "Infrastructure, security, and data systems built as reproducible labs and reviewable prototypes.",
   "projects": [
-    {
-      "title": "kube-rightsizer",
-      "description": "Educational project for mastering software architecture",
-      "technologies": [
-        "Go",
-        "Shell",
-        "Go Template",
-        "Dockerfile"
-      ],
-      "icon": "fas fa-project-diagram",
-      "image": "",
-      "github": "https://github.com/Yeshwanthreddy-oss/kube-rightsizer",
-      "demo": "https://github.com/Yeshwanthreddy-oss/kube-rightsizer"
-    },
-    {
-      "title": "three-tier-architecture",
-      "description": "Comprehensive project exploring software design patterns",
-      "technologies": [
-        "HCL",
-        "Shell"
-      ],
-      "icon": "fas fa-project-diagram",
-      "image": "",
-      "github": "https://github.com/Yeshwanthreddy-oss/three-tier-architecture",
-      "demo": "https://github.com/Yeshwanthreddy-oss/three-tier-architecture"
-    },
-    {
-      "title": "observatory",
-      "description": "Personal project for exploring modern development practices",
-      "technologies": [
-        "HCL",
-        "Python",
-        "Makefile",
-        "Dockerfile"
-      ],
-      "icon": "fas fa-project-diagram",
-      "image": "",
-      "github": "https://github.com/Yeshwanthreddy-oss/observatory",
-      "demo": "https://github.com/Yeshwanthreddy-oss/observatory"
-    },
-    {
-      "title": "sentinel-triage",
-      "description": "Personal development project using industry best practices",
-      "technologies": [
-        "Python",
-        "Dockerfile"
-      ],
-      "icon": "fas fa-project-diagram",
-      "image": "",
-      "github": "https://github.com/Yeshwanthreddy-oss/sentinel-triage",
-      "demo": "https://github.com/Yeshwanthreddy-oss/sentinel-triage"
-    },
-    {
-      "title": "deploying-aws-webapp-terraform-github-actions",
-      "description": "Personal development project using industry best practices",
-      "technologies": [
-        "HCL",
-        "HTML",
-        "Python",
-        "Dockerfile"
-      ],
-      "icon": "fas fa-brain",
-      "image": "",
-      "github": "https://github.com/Yeshwanthreddy-oss/deploying-aws-webapp-terraform-github-actions",
-      "demo": "https://github.com/Yeshwanthreddy-oss/deploying-aws-webapp-terraform-github-actions"
-    },
-    {
-      "title": "lakehouse-quality-gate",
-      "description": "Full-featured application built as a learning exercise",
-      "technologies": [
-        "Python",
-        "Dockerfile"
-      ],
-      "icon": "fas fa-project-diagram",
-      "image": "",
-      "github": "https://github.com/Yeshwanthreddy-oss/lakehouse-quality-gate",
-      "demo": "https://github.com/Yeshwanthreddy-oss/lakehouse-quality-gate"
-    },
-    {
-      "title": "vuln-priority-engine",
-      "description": "Practice repository for exploring advanced features",
-      "technologies": [
-        "Python"
-      ],
-      "icon": "fas fa-project-diagram",
-      "image": "",
-      "github": "https://github.com/Yeshwanthreddy-oss/vuln-priority-engine",
-      "demo": "https://github.com/Yeshwanthreddy-oss/vuln-priority-engine"
-    },
-    {
-      "title": "pipeline-guard",
-      "description": "Comprehensive project exploring software design patterns",
-      "technologies": [
-        "Python",
-        "Open Policy Agent",
-        "HCL",
-        "Dockerfile"
-      ],
-      "icon": "fas fa-project-diagram",
-      "image": "",
-      "github": "https://github.com/Yeshwanthreddy-oss/pipeline-guard",
-      "demo": "https://github.com/Yeshwanthreddy-oss/pipeline-guard"
-    },
-    {
-      "title": "end-to-end-pipeline-snowflake-dbt-tableau",
-      "description": "Portfolio project showcasing development capabilities",
-      "technologies": [],
-      "icon": "fas fa-project-diagram",
-      "image": "",
-      "github": "https://github.com/Yeshwanthreddy-oss/end-to-end-pipeline-snowflake-dbt-tableau",
-      "demo": "https://github.com/Yeshwanthreddy-oss/end-to-end-pipeline-snowflake-dbt-tableau"
-    },
-    {
-      "title": "atomic-detection-pipeline",
-      "description": "Practice application demonstrating full-stack development skills",
-      "technologies": [],
-      "icon": "fas fa-project-diagram",
-      "image": "",
-      "github": "https://github.com/Yeshwanthreddy-oss/atomic-detection-pipeline",
-      "demo": "https://github.com/Yeshwanthreddy-oss/atomic-detection-pipeline"
-    }
+    {"title":"kube-rightsizer","eyebrow":"Kubernetes · GitOps","description":"Turns historical Prometheus usage into p95 CPU and memory recommendations, then proposes reviewable GitOps manifest changes instead of mutating live workloads.","technologies":["Go","Kubernetes","Prometheus","Helm"],"image":"assets/img/projects/kube-rightsizer.webp","github":"https://github.com/Yeshwanthreddy-oss/kube-rightsizer","featured":true},
+    {"title":"three-tier-architecture","eyebrow":"Cloud infrastructure","description":"Terraform modules provision a three-tier AWS topology across three availability zones, separating internet-facing web, application, and database tiers.","technologies":["Terraform","AWS","VPC","RDS"],"image":"assets/img/projects/three-tier-architecture.webp","github":"https://github.com/Yeshwanthreddy-oss/three-tier-architecture","featured":true},
+    {"title":"observatory","eyebrow":"Observability lab","description":"Pairs Terraform against LocalStack with an instrumented FastAPI service and a Prometheus, Grafana, Jaeger, and OpenTelemetry telemetry stack.","technologies":["Python","OpenTelemetry","Grafana","Terraform"],"image":"assets/img/projects/observatory.webp","github":"https://github.com/Yeshwanthreddy-oss/observatory","featured":true},
+    {"title":"sentinel-triage","eyebrow":"Detection engineering","description":"Clusters security events, evaluates Sigma rules mapped to MITRE ATT&CK, and produces citation-grounded summaries for an analyst review queue.","technologies":["Python","Sigma","SQLite","OpenSearch"],"image":"assets/img/projects/sentinel-triage.webp","github":"https://github.com/Yeshwanthreddy-oss/sentinel-triage","featured":true},
+    {"title":"deploying-aws-webapp","eyebrow":"AWS application stack","description":"Terraform defines public and private networking, EC2, load balancing, RDS, and ElastiCache for a Dockerized Flask application.","technologies":["Terraform","AWS","Flask","Docker"],"image":"assets/img/projects/aws-webapp.webp","github":"https://github.com/Yeshwanthreddy-oss/deploying-aws-webapp-terraform-github-actions"},
+    {"title":"lakehouse-quality-gate","eyebrow":"Data reliability","description":"Blocks downstream dbt builds when Great Expectations detects invalid data, with structured alerts and chaos modes that prove corrupt rows cannot pass.","technologies":["Python","dbt","DuckDB","Iceberg"],"image":"assets/img/projects/lakehouse-quality-gate.webp","github":"https://github.com/Yeshwanthreddy-oss/lakehouse-quality-gate"},
+    {"title":"vuln-priority-engine","eyebrow":"Vulnerability operations","description":"Normalizes scanner findings, enriches them with EPSS and CISA KEV context, and ranks remediation work with an explainable policy-controlled score.","technologies":["FastAPI","EPSS","CISA KEV","SQLite"],"image":"assets/img/projects/vuln-priority-engine.webp","github":"https://github.com/Yeshwanthreddy-oss/vuln-priority-engine"},
+    {"title":"pipeline-guard","eyebrow":"Policy as code","description":"Combines container scanning with Terraform and Kubernetes policy checks, aggregates risk, and blocks pull requests above a configurable threshold.","technologies":["Python","Trivy","Rego","GitHub Actions"],"image":"assets/img/projects/pipeline-guard.webp","github":"https://github.com/Yeshwanthreddy-oss/pipeline-guard"},
+    {"title":"snowflake-dbt-tableau","eyebrow":"Analytics pipeline","description":"Moves raw sales data from S3 into Snowflake, models a fact table and seven dimensions with dbt, and presents the result in Tableau.","technologies":["Snowflake","dbt","SQL","Tableau"],"image":"assets/img/projects/snowflake-dbt-tableau.webp","github":"https://github.com/Yeshwanthreddy-oss/end-to-end-pipeline-snowflake-dbt-tableau"},
+    {"title":"atomic-detection-pipeline","eyebrow":"Blue-team lab","description":"Emulates a PowerShell ATT&CK technique with Atomic Red Team, captures Sysmon telemetry, and verifies the resulting Wazuh SIEM alert.","technologies":["PowerShell","Sysmon","Wazuh","MITRE ATT&CK"],"image":"assets/img/projects/atomic-detection-pipeline.webp","github":"https://github.com/Yeshwanthreddy-oss/atomic-detection-pipeline"}
   ]
 }

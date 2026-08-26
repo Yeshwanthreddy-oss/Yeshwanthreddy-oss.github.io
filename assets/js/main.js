@@ -1,5 +1,5 @@
 // ==========================================================================
-// Aisha Rahman — Portfolio bootstrap
+// Yeshwanth Reddy Aleti — Portfolio bootstrap
 // Content is loaded from /data/*.json; static <head> + <noscript> keep the
 // page meaningful for crawlers and no-JS visitors.
 // ==========================================================================
@@ -167,7 +167,7 @@ async function loadExperience() {
   experiences
     .filter((exp) => !exp._instructions)
     .forEach((exp) => {
-      const item = document.createElement("div");
+      const item = document.createElement("article");
       item.className = "timeline-item";
 
       // Prefer the bulleted responsibilities; only fall back to the prose
@@ -183,11 +183,19 @@ async function loadExperience() {
           .join("");
       }
 
+      const companyMark = escapeHtml(exp.companyMark || exp.company.slice(0, 2).toUpperCase());
+      const companyIdentity = exp.companyLogo
+        ? `<img src="${escapeHtml(exp.companyLogo)}" alt="" loading="lazy" decoding="async"
+             onerror="this.hidden=true;this.nextElementSibling.hidden=false" />
+           <span class="company-mark-fallback" hidden>${companyMark}</span>`
+        : `<span class="company-mark-fallback">${companyMark}</span>`;
       item.innerHTML = `
         <div class="timeline-header">
-          <div>
+          <div class="company-mark" aria-hidden="true">${companyIdentity}</div>
+          <div class="timeline-identity">
             <h3 class="timeline-title">${escapeHtml(exp.title)}</h3>
             <p class="timeline-company">${escapeHtml(exp.company)}</p>
+            ${exp.location ? `<p class="timeline-location">${escapeHtml(exp.location)}</p>` : ""}
           </div>
           <span class="timeline-period">${escapeHtml(exp.period)}</span>
         </div>
@@ -205,23 +213,42 @@ async function loadSkills() {
   const title = document.querySelector("#skills .section-title");
   if (title) title.textContent = data.sectionTitle;
 
+  const intro = document.getElementById("skillsIntro");
+  if (intro) intro.textContent = data.sectionIntro || "";
+
   const grid = document.getElementById("skillsGrid");
   if (!grid) return;
   grid.innerHTML = "";
 
-  (data.categories || [])
-    .filter((c) => !c._instructions && Array.isArray(c.skills))
-    .forEach((category) => {
-      const el = document.createElement("div");
-      el.className = "skill-category";
-      const tags = category.skills.map((s) => `<span class="skill-tag">${escapeHtml(s)}</span>`).join("");
-      el.innerHTML = `
-        <h3><i class="${escapeHtml(category.icon)}" aria-hidden="true"></i> ${escapeHtml(
-        category.category
-      )}</h3>
-        <div class="skill-list">${tags}</div>`;
-      grid.appendChild(el);
-    });
+  const automation = document.createElement("aside");
+  automation.className = "automation-rail";
+  automation.innerHTML = `
+    <span class="automation-label">Cross-cutting automation</span>
+    <ul>${(data.automation || []).map((skill) => `<li>${escapeHtml(skill)}</li>`).join("")}</ul>`;
+  grid.appendChild(automation);
+
+  const layers = document.createElement("div");
+  layers.className = "skill-layers";
+  (data.layers || []).forEach((layer, index) => {
+    const details = document.createElement("details");
+    details.className = "skill-layer";
+    if (index === 1) details.open = true;
+    details.innerHTML = `
+      <summary>
+        <span class="layer-code">${escapeHtml(layer.code)}</span>
+        <span class="layer-heading">
+          <span class="layer-title">${escapeHtml(layer.title)}</span>
+          <span class="layer-summary">${escapeHtml(layer.summary)}</span>
+        </span>
+        <span class="layer-count">${(layer.skills || []).length} skills</span>
+        <span class="layer-toggle" aria-hidden="true">+</span>
+      </summary>
+      <ul class="skill-list">${(layer.skills || [])
+        .map((skill) => `<li class="skill-tag">${escapeHtml(skill)}</li>`)
+        .join("")}</ul>`;
+    layers.appendChild(details);
+  });
+  grid.appendChild(layers);
 }
 
 // ==========================================================================
@@ -232,6 +259,8 @@ async function loadProjects() {
 
   const title = document.querySelector("#projects .section-title");
   if (title) title.textContent = data.sectionTitle;
+  const intro = document.getElementById("projectsIntro");
+  if (intro) intro.textContent = data.sectionIntro || "";
 
   const grid = document.getElementById("projectsGrid");
   if (!grid) return;
@@ -240,17 +269,17 @@ async function loadProjects() {
   (data.projects || [])
     .filter((p) => !p._instructions)
     .forEach((project) => {
-      const card = document.createElement("div");
-      card.className = "project-card";
+      const card = document.createElement("article");
+      card.className = `project-card${project.featured ? " project-card--featured" : ""}`;
 
       const tech = (project.technologies || [])
-        .map((t) => `<span class="tech-badge">${escapeHtml(t)}</span>`)
+        .map((t) => `<li class="tech-badge">${escapeHtml(t)}</li>`)
         .join("");
 
       const links = [];
       if (project.github) {
         links.push(
-          `<a href="${escapeHtml(project.github)}" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github" aria-hidden="true"></i> Code</a>`
+          `<a href="${escapeHtml(project.github)}" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github" aria-hidden="true"></i> View source</a>`
         );
       }
       // Only show a separate "Live Demo" when it differs from the repo link.
@@ -261,17 +290,16 @@ async function loadProjects() {
       }
 
       const media = project.image
-        ? `<img src="${escapeHtml(project.image)}" alt="${escapeHtml(
-            project.title
-          )} — project thumbnail" loading="lazy" decoding="async" onerror="this.remove()" />`
+        ? `<img src="${escapeHtml(project.image)}" alt="" loading="lazy" decoding="async" onerror="this.parentElement.classList.add('is-empty');this.remove()" />`
         : `<i class="${escapeHtml(project.icon || "fas fa-code")}" aria-hidden="true"></i>`;
 
       card.innerHTML = `
         <div class="project-image">${media}</div>
         <div class="project-content">
+          <p class="project-eyebrow">${escapeHtml(project.eyebrow || "Project")}</p>
           <h3 class="project-title">${escapeHtml(project.title)}</h3>
           <p class="project-description">${escapeHtml(project.description)}</p>
-          ${tech ? `<div class="project-tech">${tech}</div>` : ""}
+          ${tech ? `<ul class="project-tech" aria-label="Technologies used">${tech}</ul>` : ""}
           ${links.length ? `<div class="project-links">${links.join("")}</div>` : ""}
         </div>`;
       grid.appendChild(card);
@@ -344,7 +372,7 @@ async function loadContact() {
 
   const recipient =
     (contact.contactInfo || []).find((i) => i.type === "email")?.value ||
-    "aisha.rahman@example.com";
+    "yeshwanth.ra61@gmail.com";
 
   const info = document.getElementById("contactInfo");
   if (info) {
@@ -450,15 +478,25 @@ function setupInteractions() {
 
   // Mobile menu toggle with proper aria state
   if (navToggle && navMenu) {
+    const closeMenu = (restoreFocus = false) => {
+      navMenu.classList.remove("active");
+      navToggle.setAttribute("aria-expanded", "false");
+      if (restoreFocus) navToggle.focus();
+    };
     navToggle.addEventListener("click", () => {
       const open = navMenu.classList.toggle("active");
       navToggle.setAttribute("aria-expanded", String(open));
     });
     navMenu.addEventListener("click", (e) => {
       if (e.target.closest(".nav-link")) {
-        navMenu.classList.remove("active");
-        navToggle.setAttribute("aria-expanded", "false");
+        closeMenu();
       }
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && navMenu.classList.contains("active")) closeMenu(true);
+    });
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 768) closeMenu();
     });
   }
 
@@ -498,8 +536,12 @@ function setupInteractions() {
           if (!entry.isIntersecting) return;
           const link = byId.get(`#${entry.target.id}`);
           if (!link) return;
-          navLinks.forEach((l) => l.classList.remove("is-active"));
+          navLinks.forEach((l) => {
+            l.classList.remove("is-active");
+            l.removeAttribute("aria-current");
+          });
           link.classList.add("is-active");
+          link.setAttribute("aria-current", "location");
         });
       },
       { rootMargin: "-45% 0px -50% 0px", threshold: 0 }
